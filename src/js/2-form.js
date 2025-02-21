@@ -31,9 +31,13 @@ form.addEventListener('submit', event => {
     event.target.elements.email.value === '' ||
     event.target.elements.message.value === ''
   ) {
-    return console.log('Fill please all fields');
+    return alert('Fill please all fields');
   }
   console.log(formData);
   localStorage.removeItem('feedback-form-state');
   form.reset();
+  formData = {
+    email: '',
+    message: '',
+  };
 });
